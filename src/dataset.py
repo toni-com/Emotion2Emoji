@@ -4,7 +4,9 @@ from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
 
 
-def get_data_loaders(train_dir: str, test_dir: str) -> tuple[DataLoader, DataLoader]:
+def get_data_loaders(
+    train_dir: str, test_dir: str, batch_size: int = 64
+) -> tuple[DataLoader, DataLoader]:
     # train transform should have some noise
     train_transform = transforms.Compose(
         [
@@ -33,14 +35,14 @@ def get_data_loaders(train_dir: str, test_dir: str) -> tuple[DataLoader, DataLoa
     return (
         DataLoader(
             dataset=train_dataset,
-            batch_size=64,
+            batch_size=batch_size,
             shuffle=True,
             num_workers=2,
             pin_memory=True,
         ),
         DataLoader(
             dataset=val_dataset,
-            batch_size=64,
+            batch_size=batch_size,
             shuffle=False,
             num_workers=2,
             pin_memory=True,
