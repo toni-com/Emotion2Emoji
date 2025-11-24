@@ -10,7 +10,7 @@ The model was trained on the FER-2013 dataset and generalizes well to unseen dat
 
 | Happy (Keanu Reeves) | Angry (Sheldon Cooper) |
 | :---: | :---: |
-| *Accurate detection of positive sentiment and a classic smile.* | *Detects the subtle "brow furrow" and intense gaze of anger.* |
+| *Accurate detection of a classic smile.* | *Detects intense gaze of anger.* |
 | ![keanuhappy](https://github.com/user-attachments/assets/86174876-7525-4d72-9919-bfdf6060edf7) | ![ResultAngry](https://github.com/user-attachments/assets/5218d7b8-44f0-4249-9f2d-2533fa27b4a4) |
 
 | Multi-Face Detection (Linkin Park) | Console Inference |
