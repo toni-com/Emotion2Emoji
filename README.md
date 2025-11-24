@@ -11,12 +11,12 @@ The model was trained on the FER-2013 dataset and generalizes well to unseen dat
 | Happy (Keanu Reeves) | Angry (Sheldon Cooper) |
 | :---: | :---: |
 | *Accurate detection of a classic smile.* | *Detects intense gaze of anger.* |
-| ![keanuhappy](https://github.com/user-attachments/assets/86174876-7525-4d72-9919-bfdf6060edf7) | ![ResultAngry](https://github.com/user-attachments/assets/5218d7b8-44f0-4249-9f2d-2533fa27b4a4) |
+| ![keanu](https://github.com/user-attachments/assets/55550abd-029a-4ec3-8730-e24a63587dcb) | ![sheldon](https://github.com/user-attachments/assets/224d2823-8470-4153-97ea-fd0a1af58096) |
 
 | Multi-Face Detection (Linkin Park) | Console Inference |
 | :---: | :---: |
 | *Capable of batch processing multiple faces in a single frame.* | *Simple, scriptable command-line interface for batch jobs.* |
-| ![linkingneutral](https://github.com/user-attachments/assets/52576579-3cf9-4833-9a1e-81dbbeeb4e36)| <img width="1062" height="425" alt="ConsoleNeutral" src="https://github.com/user-attachments/assets/c49e1de8-1122-4f56-8822-638ca5222d3d" />|
+| ![linkin](https://github.com/user-attachments/assets/38f61164-3711-4d67-8940-f06e57136cc8)| <img width="1062" height="425" alt="ConsoleNeutral" src="https://github.com/user-attachments/assets/c49e1de8-1122-4f56-8822-638ca5222d3d" />|
 
 ## Key Features
 
