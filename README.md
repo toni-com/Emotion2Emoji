@@ -20,11 +20,10 @@ The model was trained on the FER-2013 dataset and generalizes well to unseen dat
 
 ## Key Features
 
-* **Deep Learning Backbone:** Powered by a customized **ResNet50** architecture. The final classification head was surgically modified to output 7 distinct emotion classes (Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral) instead of ImageNet's 1000.
-* **Robust Preprocessing Pipeline:** Implements a professional ETL pipeline using `torchvision.transforms` to handle grayscale conversion, channel duplication (for ResNet compatibility), and normalization.
+* **Deep Learning Backbone:** Powered by a customized **ResNet50** architecture. The final classification head was modified to output 7 distinct emotion classes (Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral) instead of ImageNet's 1000.
+* **Robust Preprocessing Pipeline:** Implements a ETL pipeline using `torchvision.transforms` to handle grayscale conversion, channel duplication (for ResNet compatibility), and normalization.
 * **Smart Inference Engine:**
     * **Primary Detector:** Uses OpenCV's Haar Cascades or YuNet for fast face detection.
-    * **Fallback Logic:** Includes a heuristic fallback system that allows the model to process "difficult" faces (like Anime/Cartoons) even when standard face detectors fail.
 * **Training Dynamics:** Features a learning rate scheduler (`ReduceLROnPlateau`) and checkpointing system to capture the best model weights during training, preventing overfitting.
 
 ## Technology Stack
