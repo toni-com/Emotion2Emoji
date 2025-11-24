@@ -2,7 +2,8 @@ import argparse
 
 import torch
 import cv2
-from PIL import Image
+import numpy as np
+from PIL import Image, ImageFont, ImageDraw
 from torchvision import transforms
 
 from src.model import FaceModel
@@ -57,6 +58,14 @@ def main(path: str, version: str = "data/models/best_model.pth"):
     )
     emoji_map = {0: "😠", 1: "🤢", 2: "😨", 3: "😊", 4: "😐", 5: "😢", 6: "😲"}
 
+    try:
+        font = ImageFont.truetype("C:/Windows/Fonts/seguiemj.ttf", size=80)
+    except OSError:
+        font = ImageFont.load_default()
+
+    pil_image = Image.fromarray(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB))
+    draw = ImageDraw.Draw(pil_image)
+
     for x, y, w, h in face_coords:
         face_roi = original_image[y : y + h, x : x + w]
 
@@ -72,19 +81,13 @@ def main(path: str, version: str = "data/models/best_model.pth"):
             pred_idx = torch.argmax(output).item()
             emoji = emoji_map[pred_idx]
 
-        # D. Draw on Image (The Wow Factor)
-        cv2.rectangle(original_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.putText(
-            original_image,
-            str(pred_idx),
-            (x, y - 10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.9,
-            (36, 255, 12),
-            2,
-        )
+        # draw on Image
+        draw.rectangle([x, y, x + w, y + h], outline=(0, 255, 0), width=4)
+        draw.text((x, y - 80), emoji, font=font, fill=(0, 255, 0))
 
         print(f"Face at ({x},{y}): {emoji}")
+
+    original_image = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
 
     cv2.imwrite("prediction_result.jpg", original_image)
     print("Saved result to prediction_result.jpg")
