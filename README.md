@@ -1,8 +1,8 @@
 # Emotion2Emoji: Real-Time Facial Expression Recognition
 
-**Emotion2Emoji** is a Computer Vision application that detects human faces in images and classifies their emotion into a corresponding Emoji.
+**Emotion2Emoji** detects human faces in images and classifies their emotion into a corresponding Emoji.
 
-Built with **PyTorch**, it features a custom-trained ResNet50 model, a robust inference pipeline capable of handling real-world noise, and a clean visualization engine.
+Built with **PyTorch** and a custom-trained ResNet50 model.
 
 ## Results
 
@@ -10,7 +10,7 @@ The model was trained on the FER-2013 dataset and generalizes well to unseen dat
 
 | Happy (Keanu Reeves) | Angry (Sheldon Cooper) |
 | :---: | :---: |
-| *Accurate detection of a classic smile.* | *Detects intense gaze of anger.* |
+| *Detection of a classic smile.* | *Detects intense anger.* |
 | ![keanu](https://github.com/user-attachments/assets/55550abd-029a-4ec3-8730-e24a63587dcb) | ![sheldon](https://github.com/user-attachments/assets/224d2823-8470-4153-97ea-fd0a1af58096) |
 
 | Multi-Face Detection (Linkin Park) | Console Inference |
