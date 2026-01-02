@@ -1,4 +1,4 @@
-# Emotion2Emoji: Real-Time Facial Expression Recognition
+# Emotion2Emoji: Facial Expression Recognition
 
 **Emotion2Emoji** detects human faces in images and classifies their emotion into a corresponding Emoji.
 
